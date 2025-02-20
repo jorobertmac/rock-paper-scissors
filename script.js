@@ -10,3 +10,10 @@ function getComputerChoice () {
     return "scissors"
   }
 }
+
+function getHumanChoice () {
+  const choices = prompt("Make a selection: rock | paper | scissors")
+  if (choices) {
+    return choiceTrimLower = choices.trim().toLowerCase()
+  }
+}
