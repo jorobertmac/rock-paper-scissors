@@ -69,3 +69,5 @@ function playGame(rounds = 5) {
     console.log(`TIE GAME!`)
   }
 }
+
+playGame()
