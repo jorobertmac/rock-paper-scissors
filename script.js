@@ -26,47 +26,52 @@ function getHumanChoice() {
 function playGame(rounds = 5) {
   let humanScore = 0
   let computerScore = 0
+  let roundNumber = 0
   function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
-      console.log("TIE! No points awarded!")
+      console.log("TIE! Replay this round");
+      return
     } else if (humanChoice === "rock") {
       if (computerChoice === "paper") {
-        console.log("You Lose! Paper covers Rock!")
+        console.log("Paper covers Rock!")
         computerScore++
       } else {
-        console.log("WINNER! Rock smashes Scissors!")
+        console.log("Rock smashes Scissors!")
         humanScore++
       }
     } else if (humanChoice === "paper") {
       if (computerChoice === "scissors") {
-        console.log("You Lose! Scissors cuts Paper!")
+        console.log("Scissors cuts Paper!")
         computerScore++
       } else {
-        console.log("WINNER! Paper covers Rock!")
+        console.log("Paper covers Rock!")
         humanScore++
       }
     } else {
       if (computerChoice === "rock") {
-        console.log("You Lose! Rock smashes Scissors!")
+        console.log("Rock smashes Scissors!")
         computerScore++
       } else {
-        console.log("WINNER! Scissors cuts Paper!")
+        console.log("Scissors cuts Paper!")
         humanScore++
       }
     }
+    roundNumber++
   }
-  while (rounds > 0) {
+  while (roundNumber < rounds) {
+    console.log(`Round ${roundNumber + 1}`)
     playRound(getHumanChoice(), getComputerChoice())
-    rounds--
+    console.log(`YOU: ${humanScore} | COMPUTER: ${computerScore}`)
+    console.log("")
   }
   if (humanScore > computerScore) {
-    console.log(`WINNER! ${humanScore} to ${computerScore}`)
+    console.log(`YOU WIN! ${humanScore} to ${computerScore}`)
   }
   else if (computerScore > humanScore) {
-    console.log(`You Lose! ${computerScore} to ${humanScore}`)
+    console.log(`YOU LOSE! ${computerScore} to ${humanScore}`)
   }
   else {
-    console.log(`TIE GAME!`)
+    console.log(`?--??x?x??--?`)
   }
 }
 
