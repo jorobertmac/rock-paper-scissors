@@ -10,9 +10,15 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  const choices = prompt("Make a selection: rock | paper | scissors")
-  if (choices) {
-    return (choiceTrimLower = choices.trim().toLowerCase())
+  let choices = ""
+  while (choices == "") {
+    choices = prompt("Make a selection: rock | paper | scissors").trim().toLowerCase()
+    if (choices == "rock" || choices == "paper" || choices == "scissors") {
+      return choices
+    }
+    else {
+      choices = ""
+    }
   }
 }
 
