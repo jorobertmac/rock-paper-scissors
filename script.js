@@ -1,3 +1,14 @@
+const selection = document.querySelectorAll(".selection")
+selection.forEach(selector => {
+  selector.addEventListener("click", function (e) {
+    selection.forEach(selector =>{
+      selector.classList.remove("selected")
+    })
+    selector.classList.add("selected")
+  })
+})
+
+
 function getComputerChoice() {
   const choice = Math.floor(Math.random() * 3)
   if (choice === 0) {
@@ -75,4 +86,4 @@ function playGame(rounds = 5) {
   }
 }
 
-playGame()
+// playGame()
