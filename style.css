@@ -1,0 +1,29 @@
+body {
+  background-color: #c3c7ca;
+  color: #215283;
+
+}
+
+img {
+  padding: 10px 50px;
+  background-color: #3498DB;
+  width: 28px;
+  border-radius: 10px;
+  border: 2px #3498DB solid;
+}
+
+img:hover {
+  background-color: #2980B9;
+  padding: 8px 48px;
+  width: 32px;
+  border: 2px #2980B9 solid;
+}
+
+.selected {
+  background-color: #21618C;
+  border: 2px #21618C solid;
+}
+
+img:hover.selected {
+  border: 2px #21618C solid;
+}
