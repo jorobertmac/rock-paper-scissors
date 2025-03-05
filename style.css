@@ -13,14 +13,15 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 30px;
-  font-size: 3rem;
+  font-size: 130%;
 }
 #playerSelection {
   text-align: center;
-  font-size: 2rem;
+  font-size: 125%;
 }
 #selection {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: space-evenly;
   padding: 30px;
@@ -80,6 +81,7 @@ img:hover.selected {
 
 #scores {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
