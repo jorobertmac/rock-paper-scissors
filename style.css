@@ -1,14 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   background-color: #c3c7ca;
   color: #215283;
 }
 
+#gameInfo {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  font-size: 3rem;
+}
+#playerSelection {
+  text-align: center;
+  font-size: 2rem;
+}
+#selection {
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  padding: 30px;
+}
+
 img {
+  box-sizing: content-box;
   padding: 10px 50px;
   background-color: #3498DB;
   width: 28px;
   border-radius: 10px;
   border: 2px #3498DB solid;
+  cursor: pointer;
 }
 
 img:hover {
@@ -25,4 +50,46 @@ img:hover {
 
 img:hover.selected {
   border: 2px #21618C solid;
+}
+
+#play {
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  min-height: 112px;
+}
+
+.play {
+  display: none;
+  box-sizing: border-box;
+  color: #c3c7ca;
+  font-size: 1.1rem;
+  font-weight: 900;
+  width: 132px;
+  height: 52px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #3498DB;
+  cursor: pointer;
+}
+
+.active:hover {
+  background-color: #2980B9;
+  font-size: 1.3rem;
+}
+
+#scores {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#scores ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#scores li {
+  padding: 10px;
+  text-align: center;
 }
