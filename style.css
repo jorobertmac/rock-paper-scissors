@@ -61,7 +61,7 @@ img:hover.selected {
 }
 
 .play {
-  display: none;
+  /* display: none; */
   box-sizing: border-box;
   color: #c3c7ca;
   font-size: 1.1rem;
@@ -74,7 +74,7 @@ img:hover.selected {
   cursor: pointer;
 }
 
-.active:hover {
+.play:hover {
   background-color: #2980B9;
   font-size: 1.3rem;
 }
