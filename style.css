@@ -79,6 +79,14 @@ img:hover.selected {
   font-size: 1.3rem;
 }
 
+#newGame {
+  display: none;
+  font-size: 1rem;
+}
+#newGame:hover {
+  font-size: 1.1rem;
+}
+
 #scores {
   display: flex;
   flex-wrap: wrap;
