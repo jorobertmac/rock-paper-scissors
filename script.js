@@ -41,6 +41,11 @@ function playGame(){
       }
     })
   }
+  function clearPlayerSelection() {
+    selections.forEach((selector) => {
+      selector.classList.remove("selected")
+    })
+  }
   
   function getComputerSelection() {
     const choice = Math.floor(Math.random() * 3)
@@ -110,12 +115,17 @@ function playGame(){
     }
     makeSelectionText.textContent += `${playerScore} to ${computerScore}`
   }
-
-  function newGame() {
+  
+  function clearScoreBoard(){
     const results = Array.from(document.querySelectorAll(".result"))
     results.forEach(result => {
       result.remove()
     })
+  }
+
+  function newGame() {
+    clearScoreBoard()
+    clearPlayerSelection()
     makeSelectionText.textContent = "Make a choice:"
     playButton.style.display = "inline-block"
     newGameButton.style.display = "none"
